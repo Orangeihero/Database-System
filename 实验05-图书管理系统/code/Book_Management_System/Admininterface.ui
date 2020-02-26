@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminInterface</class>
+ <widget class="QMainWindow" name="AdminInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1025</width>
+    <height>667</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>981</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="InsertBook" name="Insert">
+     <attribute name="title">
+      <string>图书入库</string>
+     </attribute>
+    </widget>
+    <widget class="Book" name="BookTable">
+     <attribute name="title">
+      <string>书目借阅</string>
+     </attribute>
+    </widget>
+    <widget class="ReturnBook" name="Return">
+     <attribute name="title">
+      <string>借阅信息/还书</string>
+     </attribute>
+    </widget>
+    <widget class="UserManage" name="Usermanage">
+     <attribute name="title">
+      <string>管理用户</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="User">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>6</y>
+      <width>1101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>User:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1025</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>退出</string>
+    </property>
+    <addaction name="Exit"/>
+   </widget>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="Exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Book</class>
+   <extends>QWidget</extends>
+   <header location="global">book.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InsertBook</class>
+   <extends>QWidget</extends>
+   <header location="global">InsertBook.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ReturnBook</class>
+   <extends>QWidget</extends>
+   <header location="global">returnbook.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserManage</class>
+   <extends>QWidget</extends>
+   <header location="global">usermanage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
